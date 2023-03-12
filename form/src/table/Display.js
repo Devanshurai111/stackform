@@ -5,7 +5,7 @@ const Display = (props) => {
 //   document.title="Form Details";
   const [posts, setPosts] = useState([]);
   const getPosts = async () => {
-    const res = await axios.get("http://api/posts");
+    const res = await axios.get("http://localhost:8800/api/posts");
     console.log(res.data);
     setPosts(res.data);
   };
