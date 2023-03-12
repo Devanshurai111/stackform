@@ -69,7 +69,7 @@ const Form = () => {
        const data = {
           email, name, phone, date
         }
-        const respone=  await axios.post('http://localhost:8800/api/posts', data)
+        const respone=  await axios.post('http://api/posts', data)
         console.log(respone)
         if(respone.data.msg){
           alert(respone.data.msg)
