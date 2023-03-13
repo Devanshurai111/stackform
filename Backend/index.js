@@ -45,11 +45,14 @@ app.use(morgan("common"));
 // app.use("/api/auth", authRoute);
 // app.use("/api/users", userRoute);
 app.use(cors());
-app.use("/api/posts", postRoute);
-app.use( express.static(path.resolve(__dirname,'form','build') ) );
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname,'form','build','index.html'));
-});
+  res.send('Hey this is my API running 🥳')
+})
+app.use("/api/posts", postRoute);
+// app.use( express.static(path.resolve(__dirname,'form','build') ) );
+// app.get('/', (req, res) => {
+//   res.sendFile(path.resolve(__dirname,'form','build','index.html'));
+// });
 
 app.listen(8800, () => {
   console.log("Backend server is running!");
